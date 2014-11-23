@@ -1,6 +1,6 @@
 Getting-and-Cleaning-Data-Course-Project
 ========================================
-#set working directory
+* set working directory
 setwd("D:/DS/C3W3")
 
 #download file 
