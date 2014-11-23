@@ -1,6 +1,6 @@
 Getting-and-Cleaning-Data-Course-Project
 ========================================
-#Steps to fulfill (for code look at script file)
+##Steps to fulfill (for code look at script file)
 * set working directory
 * download file 
 * unzip file
@@ -26,5 +26,5 @@ Getting-and-Cleaning-Data-Course-Project
 #5.From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject
 * using library(plyr) package
 
-*write resulting data frame to a text file
+* write resulting data frame to a text file
 
