@@ -1,6 +1,6 @@
 Getting-and-Cleaning-Data-Course-Project
 ========================================
-###Steps to fulfill (for code look at script file)
+##Steps to fulfill (for code look at script file)
 * set working directory
 * download file 
 * unzip file
