@@ -4,6 +4,7 @@ Getting-and-Cleaning-Data-Course-Project
 * download file 
 * unzip file
 * set path to unzipped files
+
 #1.Creates one data set
 * read Activity data (test and train parts) and merge by rows 
 * same to Subjects and Features
