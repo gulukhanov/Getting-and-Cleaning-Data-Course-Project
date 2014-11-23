@@ -1,18 +1,10 @@
 Getting-and-Cleaning-Data-Course-Project
 ========================================
 * set working directory
-setwd("D:/DS/C3W3")
+* download file 
+* unzip file
+* set path to unzipped files
 
-#download file 
-if(!file.exists("./data")){dir.create("./data")}
-fileUrl <- "http://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
-download.file(fileUrl,destfile="./data/Dataset.zip")
-
-#unzip file
-unzip(zipfile="./data/Dataset.zip",exdir="./data")
-
-#set path to unzipped files
-pf <- file.path("./data" , "UCI HAR Dataset")
 
 #1.Creates one data set
 #read Activity data (test and train parts) and merge by rows 
