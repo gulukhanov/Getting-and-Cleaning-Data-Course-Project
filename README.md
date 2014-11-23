@@ -4,35 +4,14 @@ Getting-and-Cleaning-Data-Course-Project
 * download file 
 * unzip file
 * set path to unzipped files
-
-
 #1.Creates one data set
-#read Activity data (test and train parts) and merge by rows 
-dataActivityTest  <- read.table(file.path(pf, "test" , "Y_test.txt" ),header = FALSE)
-dataActivityTrain <- read.table(file.path(pf, "train", "Y_train.txt"),header = FALSE)
-dataActivity<- rbind(dataActivityTrain, dataActivityTest)
-
-#same to Subjects 
-dataSubjectTrain <- read.table(file.path(pf, "train", "subject_train.txt"),header = FALSE)
-dataSubjectTest  <- read.table(file.path(pf, "test" , "subject_test.txt"),header = FALSE)
-dataSubject <- rbind(dataSubjectTrain, dataSubjectTest)
-
-#same to Features
-dataFeaturesTest  <- read.table(file.path(pf, "test" , "X_test.txt" ),header = FALSE)
-dataFeaturesTrain <- read.table(file.path(pf, "train", "X_train.txt"),header = FALSE)
-dataFeatures<- rbind(dataFeaturesTrain, dataFeaturesTest)
-
-#set names to variables
-names(dataSubject)<-c("subject")
-names(dataActivity)<- c("activity")
-dataFeaturesNames <- read.table(file.path(pf, "features.txt"),head=FALSE)
-names(dataFeatures)<- dataFeaturesNames$V2
-
-#create one data set (merge by columns)
-Data <- cbind(dataFeatures, dataSubject, dataActivity)
+* read Activity data (test and train parts) and merge by rows 
+* same to Subjects and Features
+* set names to variables
+* create one data set (merge by columns)
 
 #2.Extracts only the measurements on the mean and standard deviation for each measurement
-#extract columns with "mean()" and "std()" strings in names
+* extract columns with "mean()" and "std()" strings in names
 subdataFeaturesNames<-dataFeaturesNames$V2[grep("mean\\(\\)|std\\(\\)", dataFeaturesNames$V2)]
 selectedNames<-c(as.character(subdataFeaturesNames), "subject", "activity" )
 #create subset data frame
